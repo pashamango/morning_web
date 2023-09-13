@@ -1,8 +1,29 @@
-# Grand Experiment & Golden Principle
-
 import os
 import git
 import random
+import configparser
+
+# read the configuration file for constants
+config = configparser.ConfigParser()
+config.read('.config')
+
+git_path = config['Git']['path']
+commit_message = config['Git']['commit_message']
+gold_principle = config['Ethics']['principle']
+
+
+# initialize git
+import git
+
+repo = git.Repo.init(path=git_path)
+
+# initialize agents
+def initialize_agents():
+    # Your code for agent initialization
+
+
+
+
 
 # Define the Agent class
 class Agent:
